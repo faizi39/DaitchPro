@@ -1,0 +1,199 @@
+/* Navbar */
+.navbar {
+  width: 100%;
+  background: #071428;
+  position: fixed;
+  top: 0;
+  padding: 16px 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.nav-container {
+  max-width: 1240px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+/* Logo */
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.5px;
+}
+
+/* Nav Links */
+#navMenu {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-link {
+  position: relative;
+  overflow: hidden;
+  height: 20px;
+  text-decoration: none;
+}
+
+.nav-link span {
+  display: block;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
+}
+
+/* Original text: white */
+.nav-link .text-original {
+  color: #fff;
+  transform: translateY(0);
+}
+
+/* Hover text: green */
+.nav-link .text-hover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  color: #008080; /* Green on hover */
+  transform: translateY(100%);
+}
+
+/* Hover effect for nav links */
+.nav-link:hover .text-original {
+  transform: translateY(-100%);
+}
+
+.nav-link:hover .text-hover {
+  transform: translateY(0);
+}
+
+/* Auth Containers (Login & Sign Up) */
+/* Auth Containers (Login & Sign Up) */
+/* Auth Containers (Login & Sign Up) */
+/* Auth Containers (Login & Sign Up) */
+/* Auth Containers (Login & Sign Up) */
+/* Auth Containers (Login & Sign Up) */
+/* Auth Containers (Login & Sign Up) */
+/* Auth Containers (Login & Sign Up) */
+/* Auth Containers (Login & Sign Up) */
+.nav-auth {
+  display: flex;
+  gap: 12px;
+}
+
+.auth-container {
+  position: relative;
+  overflow: hidden;
+  padding: 0; /* remove default padding */
+  width: 120px;   /* approximate Excel cell width */
+  height: 40px;   /* approximate Excel cell height */
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: #008080; /* dark green */
+  display: inline-block;
+  text-align: center;
+  line-height: 40px; /* vertically center text */
+}
+
+/* Sliding text inside container */
+.auth-container .text-original,
+.auth-container .text-hover {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  text-align: center;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s;
+}
+
+/* Original white text */
+.auth-container .text-original {
+  color: #fff;
+  transform: translateY(0);
+  z-index: 1;
+  opacity: 1;
+}
+
+/* Hover black text, starts hidden below */
+.auth-container .text-hover {
+  color: #000;
+  transform: translateY(100%);
+  z-index: 2;
+  opacity: 0;
+}
+
+/* Hover effect: slide original up, hover down */
+.auth-container:hover .text-original {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.auth-container:hover .text-hover {
+  transform: translateY(0);
+  opacity: 1;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between logo and text if you keep text */
+}
+
+.logo-img {
+  height: 36px; /* adjust size to fit navbar */
+  width: auto;  /* keep aspect ratio */
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0; /* remove space between logo and text */
+}
+
+.logo-img {
+  height: 40px; /* adjust size if needed */
+  width: auto;
+  margin: 0; /* ensure no extra margin */
+}
+
+.site-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin: 0; /* remove any default margin */
+}
+
+/* Mobile Menu */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 850px) {
+  #navMenu,
+  .nav-auth {
+    display: none;
+  }
+
+  #navMenu.open,
+  .nav-auth.open {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    position: absolute;
+    top: 70px;
+    right: 40px;
+    background: #0b1e36;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.12);
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
