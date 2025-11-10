@@ -2,84 +2,89 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta viewport="width=device-width, initial-scale=1.0">
   <title>DaitchPro - Page 9</title>
   <link rel="stylesheet" href="../style.css">
+
   <style>
-    /* Subtle green grid background with slightly larger squares */
+    /* Background Grid */
     .section-wrapper {
-      padding-top: 140px;
-      min-height: 100vh;
+      min-height: vh;
       display: flex;
       justify-content: center;
-      color: #fff;
+      align-items: center; /* vertical center */
       background-color: #071428;
+      color: #fff;
       background-image:
-        linear-gradient(rgba(0, 255, 0, 0.15) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 255, 0, 0.15) 1px, transparent 1px);
-      background-size: 75px 75px; /* slightly larger grid squares */
+        linear-gradient(rgba(0, 255, 0, 0.10) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 0, 0.10) 1px, transparent 1px);
+      background-size: 70px 70px; 
+    }
+
+    /* Side-by-Side Center Layout */
+    .page-9-container {
+      width: 1200px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; /* vertical center for text + image */
+      gap: 60px;
+      padding: 40px 20px;
     }
 
     .page-9-text h2 {
-      font-size: 30px;        /* slightly smaller to fit in one line */
-      text-align: left;
-      margin-bottom: 20px;
-      white-space: nowrap;    /* prevent wrapping */
+      font-size: 30px;
+      margin-bottom: 16px;
+      white-space: nowrap; /* keep in one line */
     }
 
     .page-9-text p {
       font-size: 18px;
       line-height: 1.65;
-      max-width: 100%;
-      text-align: justify;
-      margin-bottom: 30px;
-    }
-
-    .page-9-image-box {
-      width: 100%;
-      display: flex;
-      justify-content: center;
+      opacity: 0.9;
+      max-width: 500px;
     }
 
     .page-9-image-box img {
       width: 100%;
-      max-width: 650px;
+      max-width: 500px;
       border-radius: 14px;
     }
 
-    /* MOBILE RESPONSE */
+    /* Mobile */
     @media (max-width: 900px) {
+      .page-9-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
       .page-9-text h2 {
-        font-size: 28px;
-        white-space: normal; /* allow wrapping on smaller screens */
-      }
-      .page-9-text p {
-        font-size: 16px;
-      }
-      .page-9-image-box img {
-        max-width: 100%;
+        white-space: normal;
       }
     }
   </style>
 </head>
+
 <body>
 
   <main class="section-wrapper">
     <section class="page-9-container">
-      <div class="page-9-text">
-        <h2 class="page-title">Documentation, Training & Ownership</h2>
-        <p class="page-description">
-          You get the full Owner's Manual, Loom walkthroughs, and source delivery, ensuring complete independence. 
+
+      <!-- TEXT LEFT -->
+      <article class="page-9-text">
+        <h2>Documentation, Training & Ownership</h2>
+        <p>
+          You get the full Owner's Manual, Loom walkthroughs, and source delivery, ensuring complete independence.
           Learn your system inside out from AI prompt editing to workflow updates and scale confidently without external help.
         </p>
-      </div>
+      </article>
 
+      <!-- IMAGE RIGHT -->
       <figure class="page-9-image-box">
-        <img src="images/9.jpg" alt="Page 9 Image" class="page-image">
+        <img src="images/9.jpg" alt="Page 9 Image">
       </figure>
+
     </section>
   </main>
 
-  <script src="../script.js"></script>
 </body>
 </html>

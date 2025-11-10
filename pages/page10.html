@@ -6,7 +6,7 @@
   <title>DaitchPro - Page 10</title>
   <link rel="stylesheet" href="../style.css">
   <style>
-    /* Subtle green grid background with slightly larger squares */
+    /* Subtle green grid background */
     .section-wrapper {
       padding-top: 140px;
       min-height: 100vh;
@@ -17,23 +17,39 @@
       background-image:
         linear-gradient(rgba(0, 255, 0, 0.15) 1px, transparent 1px),
         linear-gradient(90deg, rgba(0, 255, 0, 0.15) 1px, transparent 1px);
-      background-size: 75px 75px; /* slightly larger grid squares */
+      background-size: 75px 75px;
     }
 
+    .page-10-container {
+      width: 90%; /* container width */
+      max-width: 1200px; 
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; /* align content slightly to left */
+      gap: 20px;
+      padding: 0 10px;
+    }
+
+    .page-10-text {
+      width: 100%;
+      max-width: 900px; /* text block width */
+      text-align: left;  /* shift text slightly to left */
+    }
+
+    /* Title */
     .page-10-text h2 {
       font-size: 36px;
-      text-align: left;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
 
+    /* Paragraph */
     .page-10-text p {
       font-size: 20px;
       line-height: 1.7;
-      max-width: 100%;
       text-align: justify;
-      margin-bottom: 30px;
     }
 
+    /* Image section */
     .page-10-image-box {
       width: 100%;
       display: flex;
@@ -41,12 +57,13 @@
     }
 
     .page-10-image-box img {
-      width: 100%;
-      max-width: 1300px;
+      width: 70%;         
+      max-width: 900px;
       border-radius: 14px;
+      object-fit: cover;
     }
 
-    /* MOBILE RESPONSE */
+    /* Mobile responsiveness */
     @media (max-width: 900px) {
       .page-10-text h2 {
         font-size: 32px;
@@ -55,6 +72,7 @@
         font-size: 18px;
       }
       .page-10-image-box img {
+        width: 100%;
         max-width: 100%;
       }
     }
@@ -72,7 +90,7 @@
       </div>
 
       <figure class="page-10-image-box">
-        <img src="images/10.jpg" alt="Page 10 Image" class="page-image">
+        <img src="images/10.JPG" alt="Page 10 Image" class="page-image">
       </figure>
     </section>
   </main>
